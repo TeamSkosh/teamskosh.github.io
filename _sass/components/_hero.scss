@@ -1,0 +1,16 @@
+/**
+ * Hero
+ */
+.hero {
+    background: $gray-tint;
+    margin-top: $spacing-unit;
+    padding: $spacing-unit 0;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 500px;
+    }
+}
