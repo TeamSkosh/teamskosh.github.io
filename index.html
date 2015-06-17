@@ -3,27 +3,81 @@ layout: main
 title: Home
 ---
 
-<h2 class="section-header">People-centered. Integrity-driven.</h2>
-
-<hr>
-<div class="row">
-    <div class="column one-whole medium-one-half">
-        <p>
-            Composed of a couple of guys with a strong sense of “ought” and a
-            unique combination of skills, Skosh Interactive works to deliver
-            quality solutions that meet and exceed your business needs.
-        </p>
-
-        <p>
-            In addition to web development and IT consulting, we specialize in
-            design –print, web, branding, and otherwise. You can find us in
-            Grand Forks, North Dakota, but we’ve worked with people from all
-            around the country. We strive to create work that is
-            well-thought-out, relevant, and ultimately, purposeful.
-        </p>
-    </div><!-- /.column -->
-
-    <div class="column one-whole medium-one-half">
+<section id="hero" class="full loading">
+    <div id="logo">
         <img src="{{ '/img/skosh-full-horiz-main-rgb.svg' | prepend: site.baseurl }}" alt="Skosh Logo">
-    </div><!-- /.column -->
-</div><!-- /.row -->
+    </div>
+
+    <div id="tagline">
+        <p>We're a little different.</p>
+
+        <img id="down-arrow" src="{{ '/img/down-arrow.svg' | prepend: site.baseurl }}" alt="Down Arrow">
+    </div>
+</section><!-- /#hero -->
+
+<section id="about">
+    <div class="container">
+        <h2>People-centered. Integrity-driven.</h2>
+
+        <hr>
+
+        <div class="row">
+            <div class="column one-whole large-one-half">
+                <p class="dropcap">
+                    <span class="initial-phrase">Composed of</span> a couple of
+                    guys with a strong sense of “ought” and a unique combination
+                    of skills,
+                    <a href="https://github.com/{{ site.github_username }}">
+                    Skosh Interactive</a> works to deliver quality solutions
+                    that meet and exceed your business needs.
+                </p>
+
+                <p>
+                    In addition to web development and IT consulting, we
+                    specialize in design –print, web, branding, and otherwise.
+                    You can find us in Grand Forks, North Dakota, but we’ve
+                    worked with people from all around the country. We strive to
+                    create work that is well-thought-out, relevant, and
+                    ultimately, purposeful.
+                </p>
+            </div><!-- /.column -->
+
+            <div class="column one-whole large-one-half">
+                <img src="{{ '/img/usa-map.svg' | prepend: site.baseurl }}" alt="Map of USA">
+            </div><!-- /.column -->
+        </div><!-- /.row -->
+
+        <h2 class="call-to-action">
+            If you are keen on the idea of working with us, <a href="#">get
+            in touch</a>.
+        </h2>
+    </div><!-- /.container -->
+</section><!-- /#about -->
+
+<section id="features">
+    <div class="container">
+        <h2>Here's what we do.</h2>
+
+        <hr>
+
+        <div class="row feature-icons">
+            <div class="column one-whole medium-one-third feature-icon">
+                <img src="{{ '/img/feature-design.svg' | prepend: site.baseurl }}" alt="Design Feature Illustration">
+
+                <h3>Design</h3>
+            </div><!-- /.column -->
+
+            <div class="column one-whole medium-one-third feature-icon">
+                <img src="{{ '/img/feature-develop.svg' | prepend: site.baseurl }}" alt="Develop Feature Illustration">
+
+                <h3>Develop</h3>
+            </div><!-- /.column -->
+
+            <div class="column one-whole medium-one-third feature-icon">
+                <img src="{{ '/img/feature-consult.svg' | prepend: site.baseurl }}" alt="Consult Feature Illustration">
+
+                <h3>Consult</h3>
+            </div><!-- /.column -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /#features -->

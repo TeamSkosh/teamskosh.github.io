@@ -4,7 +4,7 @@
 .container {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 0 $spacing-unit / 2;
+    padding: 0 ($spacing-unit / 2);
 
     @include clearfix;
 }
@@ -14,28 +14,22 @@ hr {
     border-top: none;
 }
 
-/**
- * Home
- */
-.feature-icon {
-    padding: 0 $spacing-unit;
-    text-align: center;
-
-    img {
-        margin-bottom: $spacing-unit / 2;
-        max-height: 140px;
-        width: 100%;
-    }
-
-    @include mq($medium) {
-        p {
-            text-align: left;
-        }
-    }
+section {
+    padding: ($spacing-unit * 2) 0;
 }
 
-.section-header {
-    color: $gray;
+p.dropcap {
+    span.initial-phrase {
+        color: $brand-secondary;
+        font-variant: small-caps;
+    }
+
+    &::first-letter {
+        color: $brand-secondary;
+        float: left;
+        font-size: 324%;
+        line-height: 0.95;
+    }
 }
 
 /**

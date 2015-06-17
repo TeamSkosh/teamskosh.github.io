@@ -1,0 +1,121 @@
+/**
+ * Home
+ */
+#hero {
+    padding: 0;
+}
+
+#logo,
+#tagline {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    cursor: default;
+    padding: 0 ($spacing-unit / 2);
+    pointer-events: none;
+}
+
+#logo {
+    cursor: auto;
+    pointer-events: auto;
+    top: 30%;
+    -webkit-transform: translate3d(0,25%,0);
+    transform: translate3d(0,25%,0);
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+#tagline {
+    bottom: 10%;
+    cursor: auto;
+    pointer-events: auto;
+
+    p {
+        color: $brand-secondary;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100px;
+        width: 100%;
+    }
+}
+
+#logo,
+#tagline {
+    opacity: 1;
+    -webkit-animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+    animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+#tagline {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes animInitialHeader {
+    from { opacity: 0; -webkit-transform: translate3d(0,800px,0); }
+}
+
+@keyframes animInitialHeader {
+    from { opacity: 0; -webkit-transform: translate3d(0,800px,0); transform: translate3d(0,800px,0); }
+}
+
+#about {
+    background: $gray;
+    color: $white;
+
+    .call-to-action {
+        margin-top: $spacing-unit * 2;
+        text-align: center;
+    }
+}
+
+#features {
+    h2 {
+        color: lighten($gray, 25%);
+    }
+
+    hr {
+        border-color: $brand-secondary;
+    }
+}
+
+.feature-icons {
+    margin-top: $spacing-unit * 2;
+
+    .column {
+        padding: 0 $spacing-unit;
+        text-align: center;
+
+        img {
+            margin-bottom: $spacing-unit / 2;
+            max-height: 235px;
+            width: 100%;
+        }
+
+        h3 {
+            color: lighten($gray, 25%);
+            font-weight: 100;
+            margin: $spacing-unit 0;
+        }
+    }
+
+    @include mq($medium) {
+        p {
+            text-align: left;
+        }
+    }
+}
