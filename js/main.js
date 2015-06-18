@@ -1,3 +1,9 @@
+function init() {
+    window.scrollTo(0,0);
+}
+
+init();
+
 $(document).ready(function() {
     $("#menu-icon").click(function() {
         $(".site-nav").toggleClass('is-visible');
@@ -17,13 +23,4 @@ $(document).ready(function() {
         medium_mq.addListener(WidthChange);
         WidthChange(medium_mq);
     }
-
-    // Full Page sections
-    $(".full").height($(window).height());
-
-    $( window ).resize(function() {
-        if($(document).scrollTop() == 0) {
-            $(".full").height($(window).height());
-        }
-    });
 });

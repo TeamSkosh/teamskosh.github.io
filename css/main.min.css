@@ -2207,6 +2207,7 @@ p.dropcap::first-letter {
  */
 #hero {
   padding: 0;
+  height: 100vh;
 }
 
 #logo,

@@ -93,8 +93,8 @@ module.exports = function(grunt) {
     require("load-grunt-tasks")(grunt);
 
     grunt.registerTask('serve', [
-        'copy:jquery',
-        'copy:fuselage',
+        'newer:copy:jquery',
+        'newer:copy:fuselage',
         'concurrent:serve'
     ]);
 
