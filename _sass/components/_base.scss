@@ -18,20 +18,6 @@ section {
     padding: ($spacing-unit * 2) 0;
 }
 
-p.dropcap {
-    span.initial-phrase {
-        color: $brand-secondary;
-        font-variant: small-caps;
-    }
-
-    &::first-letter {
-        color: $brand-secondary;
-        float: left;
-        font-size: 324%;
-        line-height: 0.95;
-    }
-}
-
 /**
  * Icons
  */
