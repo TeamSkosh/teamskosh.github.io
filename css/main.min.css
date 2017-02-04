@@ -2752,13 +2752,14 @@ section {
 /**
  * Home
  */
-#hero {
+.hero {
   padding: 0;
   height: 100vh;
+  position: relative;
 }
 
-#logo,
-#tagline {
+.logo,
+.tagline {
   position: absolute;
   left: 0;
   width: 100%;
@@ -2768,15 +2769,14 @@ section {
   pointer-events: none;
 }
 
-#logo {
+.logo {
   cursor: auto;
   pointer-events: auto;
   top: 30%;
-  -webkit-transform: translate3d(0, 25%, 0);
   transform: translate3d(0, 25%, 0);
 }
 
-#logo img {
+.logo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -2784,20 +2784,20 @@ section {
   max-width: 500px;
 }
 
-#tagline {
+.tagline {
   bottom: 10%;
   cursor: auto;
   pointer-events: auto;
 }
 
-#tagline p {
+.tagline p {
   color: #6DBBB7;
   font-style: italic;
   font-weight: bold;
   text-align: center;
 }
 
-#tagline img {
+.tagline img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -2805,48 +2805,71 @@ section {
   width: 100%;
 }
 
-#logo,
-#tagline {
+.logo,
+.tagline {
   opacity: 1;
-  -webkit-animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
   animation: animInitialHeader 1s cubic-bezier(0.7, 0, 0.3, 1) both;
 }
 
-#tagline {
-  -webkit-animation-delay: 0.2s;
+.tagline {
   animation-delay: 0.2s;
 }
 
-@-webkit-keyframes animInitialHeader {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 800px, 0);
-  }
+.down-arrow {
+  animation: animDownArrow 1s cubic-bezier(0.7, 0, 0.3, 1) both;
+  animation-delay: 1.5s;
 }
 
 @keyframes animInitialHeader {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 800px, 0);
     transform: translate3d(0, 800px, 0);
   }
 }
 
-#about {
-  background: #5D5D5D;
-  color: #FFF;
+@keyframes animDownArrow {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-#about .call-to-action {
+.latest {
+  background: #FAFAFA;
+  border-top: 1px solid #CCCCCC;
+}
+
+.callout {
   margin-top: 5.2360680503rem;
   text-align: center;
 }
 
-#features h2 {
+.about {
+  background: #5D5D5D;
+  color: #FFF;
+}
+
+.about .call-to-action {
+  margin-top: 5.2360680503rem;
+  text-align: center;
+}
+
+.features h2 {
   color: #9d9d9d;
 }
 
-#features hr {
+.features hr {
   border-color: #6DBBB7;
 }
 
