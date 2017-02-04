@@ -3,19 +3,37 @@ layout: main
 title: Home
 ---
 
-<section id="hero">
-    <div id="logo">
+<section class="hero">
+    <div class="logo">
         <img src="{{ '/img/skosh-full-horiz-main-rgb.svg' | prepend: site.baseurl }}" alt="Skosh Logo">
     </div>
 
-    <div id="tagline">
+    <div class="tagline">
         <p>We're a little different.</p>
 
-        <img id="down-arrow" src="{{ '/img/down-arrow.svg' | prepend: site.baseurl }}" alt="Down Arrow">
+        <img class="down-arrow" src="{{ '/img/down-arrow.svg' | prepend: site.baseurl }}" alt="Down Arrow">
     </div>
 </section><!-- /#hero -->
 
-<section id="about">
+<section class="latest">
+    <div class="container">
+        <div class="row">
+            <div class="column one-whole medium-two-thirds">
+                <img src="{{ '/img/fuselage-drawing.svg' | prepend: site.baseurl }}" alt="Fuselage Drawing">
+            </div>
+
+            <div class="column one-whole medium-one-third callout">
+                <p>We proudly built and actively maintain Fuselage, a mobile-first front-end framework</p>
+
+                <a href="http://fuselage.skosh.io" class="button small">
+                    Check it out
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
     <div class="container">
         <h2>People-centered. Integrity-driven.</h2>
 
@@ -54,7 +72,7 @@ title: Home
     </div><!-- /.container -->
 </section><!-- /#about -->
 
-<section id="features">
+<section class="features">
     <div class="container">
         <h2>Here's what we do.</h2>
 

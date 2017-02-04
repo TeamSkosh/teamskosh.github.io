@@ -1,13 +1,14 @@
 /**
  * Home
  */
-#hero {
+.hero {
     padding: 0;
     height: 100vh;
+    position: relative;
 }
 
-#logo,
-#tagline {
+.logo,
+.tagline {
     position: absolute;
     left: 0;
     width: 100%;
@@ -17,11 +18,10 @@
     pointer-events: none;
 }
 
-#logo {
+.logo {
     cursor: auto;
     pointer-events: auto;
     top: 30%;
-    -webkit-transform: translate3d(0,25%,0);
     transform: translate3d(0,25%,0);
 
     img {
@@ -33,7 +33,7 @@
     }
 }
 
-#tagline {
+.tagline {
     bottom: 10%;
     cursor: auto;
     pointer-events: auto;
@@ -54,27 +54,44 @@
     }
 }
 
-#logo,
-#tagline {
+.logo,
+.tagline {
     opacity: 1;
-    -webkit-animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
     animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
 }
 
-#tagline {
-    -webkit-animation-delay: 0.2s;
+.tagline {
     animation-delay: 0.2s;
 }
 
-@-webkit-keyframes animInitialHeader {
-    from { opacity: 0; -webkit-transform: translate3d(0,800px,0); }
+.down-arrow {
+    animation: animDownArrow 1s cubic-bezier(0.7,0,0.3,1) both;
+    animation-delay: 1.5s;
 }
 
 @keyframes animInitialHeader {
-    from { opacity: 0; -webkit-transform: translate3d(0,800px,0); transform: translate3d(0,800px,0); }
+    from { opacity: 0; transform: translate3d(0,800px,0); }
 }
 
-#about {
+@keyframes animDownArrow {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(50px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(25px); }
+    100% { transform: translateY(0);}
+}
+
+.latest {
+    background: $off-white;
+    border-top: 1px solid $border-color;
+}
+
+.callout {
+    margin-top: $spacing-unit * 2;
+    text-align: center;
+}
+
+.about {
     background: $gray;
     color: $white;
 
@@ -84,7 +101,7 @@
     }
 }
 
-#features {
+.features {
     h2 {
         color: lighten($gray, 25%);
     }
